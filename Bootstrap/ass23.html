@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Control Validation</title>
+	<meta charset="utf-8">
+	<meta charset="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+		<div class="row">
+			<br>
+			<div class="col-xs-12">
+			<form class="form-horizontal">
+				<div class="form-group has-success has-feedback">
+					<label for="Password" class="col-xs-2 control-label">Password</label>
+					<div class="col-xs-10">
+						<div class="input-group">
+							<span class="input-group-addon">#</span>
+						<input type="text" class="form-control" name="" placeholder="Your Password">
+						</div>
+						<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+						<span class="help-block">Strong Password</span>
+					</div>
+				</div>
+				<div class="form-group has-warning has-feedback">
+					<label for="Password" class="col-xs-2 control-label">Password</label>
+					<div class="col-xs-10">
+						<div class="input-group">
+							<span class="input-group-addon">#</span>
+						<input type="text" class="form-control" name="" placeholder="Your Password">
+					</div>
+						<span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+						<span class="help-block">Weak Password</span>
+					</div>
+				</div>
+				<div class="form-group has-error has-feedback">
+					<label for="Password" class="col-xs-2 control-label">Age</label>
+					<div class="col-xs-10">
+						<input type="text" class="form-control" name="" placeholder="Your Age">
+						<span class="glyphicon glyphicon-remove form-control-feedback"></span>
+						<span class="help-block">Invalid Age</span>
+					</div>
+				</div>
+			</form>
+		</div>
+		</div>
+	</div>
+</body>
+</html>

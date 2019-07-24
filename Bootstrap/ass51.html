@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+  <meta charset="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#imgcaro').carousel();
+        });
+    </script>
+</head>
+<body>
+  <br><br>
+  <div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div id="imgcaro" class="carousel slide" data-interval="2000">
+        <ol class="carousel-indicators">
+          <li data-target="imgcaro" data-slide-to="0"></li>
+          <li data-target="imgcaro" data-slide-to="1"></li>
+          <li data-target="imgcaro" data-slide-to="2"></li>
+          
+        </ol>
+        <div class="carousel-inner">
+          <div class="item-active">
+            <img src="desert.jpg" class="img-responsive">
+            <div class="carousel-caption">
+              <h3>Desert</h3>
+              <p>Beautiful Desert</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="garden.jpg" class="img-responsive">
+            <div class="carousel-caption">
+              <h3>Garden</h3>
+              <p>Beautiful Garden</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="water.jpg" class="img-responsive">
+            <div class="carousel-caption">
+              <h3>River</h3>
+              <p>Beautiful River</p>
+            </div>
+          </div>
+        </div>
+        <a href="#imgcaro" class="carousel-control left" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a href="#imgcaro" class="carousel-control right" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

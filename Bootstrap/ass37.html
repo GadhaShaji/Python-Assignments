@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta charset="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    		$('#togglebtn').click(function(){
+    			$('#imgGallery').collapse('toggle');
+    		});
+    		$('#hidebtn').click(function(){
+    			$('#imgGallery').collapse('hide');
+    		});
+    		$('#showbtn').click(function(){
+    			$('#imgGallery').collapse('show');
+    		});
+            
+    	});
+    </script>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<br>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<button class="btn btn-primary" id="togglebtn">
+					Toggle Image Gallery
+				</button>
+				<button class="btn btn-primary" id="hidebtn">
+					Hide Image Gallery
+				</button>
+				<button class="btn btn-primary" id="showbtn">
+					Show Image Gallery
+				</button>
+			</div>
+			<div class="panel-body collapse" id="imgGallery">
+				<div class="col-xs-4">
+			<a href="#" class="thumbnail">
+				<p>flower 1</p>
+				<img src="f1.jpg">
+			</a>
+		</div>
+		<div class="col-xs-4">
+			<a href="#" class="thumbnail">
+				<p>flower 2</p>
+				<img src="f2.jpg">
+			</a>
+		</div>
+		<div class="col-xs-4">
+			<a href="#" class="thumbnail">
+				<p>flower 3</p>
+				<img src="flower.png">
+			</a>
+		</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+</body>
+</html>

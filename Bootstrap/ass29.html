@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta charset="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style type="text/css">
+    	.b1>li+li:before{
+    		content: "|\00a0";
+    	}
+    	.bground{
+    		background-color: yellow;
+    	}
+    	.breadcrumb>.active {
+    color: red;
+}
+    	
+    </style>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+		<ol class="breadcrumb">
+
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Product</a></li>
+		</ol>
+		<ol class="breadcrumb b1">
+
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Product</a></li>
+		</ol>
+		<ol class="breadcrumb">
+
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Contact</a></li>
+			<li class="active"><a href="#">About</a></li>
+			<li><a href="#">Product</a></li>
+		</ol>
+		<ol class="breadcrumb bground">
+
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Product</a></li>
+		</ol>
+	</div>
+	</div>
+</div>
+</body>
+</html>
