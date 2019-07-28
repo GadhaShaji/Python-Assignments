@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <style type="text/css">
+    .error {
+  color: red;
+  margin-left: 5px;
+}
+
+  </style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+
+      $("#btn").click(function() {
+    var username = $("#txtuser").val();
+    var pass = $("#psd").val();
+    if (username.length < 1) {
+      $("#txtuser").after('<br><label class="error">Enter your Username</label>');
+      
+    }
+    if (pass.length < 1) {
+      $("#psd").after('<br><label class="error">Enter your Password</label>');
+
+    }
+      }),
+
+        $("#myform").submit(function() {
+          
+    var first_name = $("#fname").val();
+    var last_name = $("#lname").val();
+    var mob_no = $("#mob").val();
+    var email = $("#txtemail").val();
+    var password = $("#txtpass").val();
+    flag=0;
+    if (first_name.length < 1) {
+       
+      $("#fname").after('<br><label class="error">Enter your First Name</label>');
+        flag++;
+      }
+else
+{
+   $("#fname").after('<br><label class="error">');
+}
+      
+        if (last_name.length < 1) {
+      $("#lname").after('<br><label class="error">Enter your Last Name</label>');
+      flag++;
+    }
+     if (mob_no.length < 1) {
+      $("#mob").after('<br><label class="error">Enter your Mobile No</label>');
+      flag++;
+    }
+    if (email.length < 1) {
+      $("#txtemail").after('<br><label class="error">Enter your Email</label>');
+      flag++;
+    } else {
+      var reg = /^[A-Z0-9][A-Z0-9._%+-]{0,63}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/;
+      var validEmail = reg.test(email);
+      if (!validEmail) {
+        $("#txtpass").after('<br><label class="error">Enter a valid Email</label>');
+        flag++;
+      }
+    }
+    if (password.length < 1) {
+      $("#txtpass").after('<br><label class="error">Password must be at least 8 characters long</label>');
+      flag++;
+    }
+
+     if ($('input[name="gender"]:checked').length == 0){
+      $("#txtgender").after('<br><label class="error">Select any Gender</label>');
+    flag++;
+    return false;
+  }
+   if(flag>0)
+      {
+        
+      }
+      return true;
+  
+  });
+
+        });
+ 
+  </script>
+</head>
+<body>
+	<form id="myform" method="" action="">
+<table width="100%" cellspacing="0">
+	
+		<tr style="background-color:#3b5998;color: white; ">
+		<td width="55%"><img src="fblogo.png" width="220px"></td>
+		<td align="left">
+			<label>Username or Phone</label> <label style="padding-left: 80px;">Password</label>	<br>
+			 <input type="text" id="txtuser" name="username">
+			   
+			<input type="text" name="password" id="psd">
+			<button id="btn" value="LOGIN">LOGIN</button><br>
+			
+		</td>
+
+		</tr>
+
+		<tr bgcolor="#f0f5f5">
+		<td>
+			<table style="padding-bottom: 250px;">
+				<tr><td><h3 style="padding-left: 100px;">Connect with friends and the world around you on Facebook</h3></td></tr>
+				<br><br>
+				<tr><td><img src="facebookhome.png" style="padding-left: 100px;"></td></tr>
+
+			</table>
+		</td>
+		<td><table>
+				<tr><td><h2>Create an account</h2><h6>It's free and always will be</h6></td>
+					</tr>
+				<tr><td><table border="0" cellspacing="10" >
+      	<tr>
+      		<td>
+      			<input type="text" placeholder="First Name" id="fname" style="height: 30px"size="20">
+            <label id="lblfnme"></label>
+      		</td>
+           <td align="left" style="padding-right:75px">
+      			<input type="text" placeholder="Last Name" id="lname" style="height: 30px"size="30"><br>
+           
+      		</td>	
+
+      	</tr>
+        <tr><span id="sp1"></span></tr>
+       
+
+      	<tr>
+      		<td colspan="2">
+      			<input type="text" size="60" placeholder="Mobile Number" id="mob" style="height: 40px"><br>
+            
+      		</td>
+      	</tr>
+        <tr><span id="sp1"></span></tr>
+      	<tr>
+      		<td colspan="2">
+      			<input type="text" size="60" placeholder="Email" id="txtemail" style="height: 40px"><br>
+            
+      		</td>
+      	</tr>
+        <tr><span id="sp1"></span></tr>
+      	<tr>
+      		<td colspan="2">
+      			<input type="text" size="60" placeholder="Password" id="txtpass" style="height: 40px"><br>
+            
+      		</td>
+      	</tr>
+        <tr><span id="sp1"></span></tr>
+      	<tr><td colspan ="5" align="left">Birthday</td></tr>
+      	<tr>
+      		
+		<td ><select name="Day">
+    <option value="01">Day</option>
+    <option value="02">01</option>
+    <option value="03">02</option>
+    <option value="04">03</option>
+    <option value="05">04</option>
+  </select>
+  <select name="Month">
+    <option value="01">Month</option>
+    <option value="02">Jan</option>
+    <option value="03">Feb</option>
+    <option value="04">Mar</option>
+    <option value="05">Apr</option>
+  </select>
+  <select name="Year">
+    <option value="01">Year</option>
+    <option value="02">1990</option>
+    <option value="03">1991</option>
+    <option value="04">1993</option>
+    <option value="05">1994</option>
+  </select>
+  <td><p style="color: blue;width: 200px;">Why do I need to provide my date of birth.</p></td>
+</td>
+      	</tr>
+        <tr><span id="sp1"></span></tr>
+      	<tr>
+      		<td colspan="2">
+      			<input type="radio" name="gender">Male
+      			<input type="radio" name="gender">Female
+            <label id="txtgender"></label>
+      		</td>
+      	</tr>
+        <tr><span id="sp1"></span></tr>
+      	<tr>
+      		<td colspan="2">
+      			<font color="#666666" face="Verdana,Arial,Helvetica,sans-serif" size="1">By Clicking Sign Up,you agree to our <span style="color: blue">Terms</span> and that you have read our Data Use <span style="color: blue;">Policy</span>,including our Cookie Use.</font>
+      		</td>
+      	</tr>
+      	<tr>
+      		<td colspan="2">
+      			<input type="submit" value="Create an account"  width="140" style="border-radius: 8px;
+			background-color: #1b631c;
+			height: 30px;
+			color: white;">
+      		</td>
+      	</tr>
+      </table>  </td></tr>
+			</table></td>
+			<td></td>
+			<td></td>
+	</tr>
+	<tr></tr>
+</table>
+</form>
+</body>
+</html>

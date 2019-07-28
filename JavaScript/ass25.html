@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+          
+         var imagetrack='f';
+		function change()
+		{
+            var image=document.getElementById("abc");
+		   if (imagetrack=='f') {
+		   	image.src="f1.jpg";
+		   	imagetrack='t';
+		   }
+		   else
+		   {
+		   		image.src="f2.jpg";
+		   	    imagetrack='f';
+		   }
+		}
+		
+		
+		
+	</script>
+	
+</head>
+<body>
+	<img src="f1.jpg" style="width: 500px; height: 500px;" id="abc" alt="" onclick="change()">
+	
+</body>
+</html>

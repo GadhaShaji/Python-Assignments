@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<script type="text/javascript">
+		function sub()
+		{
+			var det=document.getElementById("abc");
+
+			var fnme=document.getElementById('fnme');
+
+			var lnme=document.getElementById('lnme');
+			var email=document.getElementById('email');
+			
+			det.innerHTML="My name is"+fnme.value+" "+lnme.value+"."+" Email Id is "+email.value;
+			
+           
+		}
+	</script>
+</head>
+
+<body>
+
+<form>
+	<table>
+		<tr>
+		<td>First Name:</td>
+		<td><input type="text" id="fnme" value=""></td>
+		</tr>
+		<tr>
+		<td>Last Name:</td>
+		<td><input type="text" id="lnme" value=""></td>
+		</tr>
+		<tr>
+		<td>Email ID:</td>
+		<td><input type="text" id="email" value="" ></td>
+		</tr>
+		<tr>
+		<td>Password:</td>
+		<td><input type="password" name="" id="" value=""></td>
+		</tr>
+		<tr>
+			<td><input type="button" name="" value="Sign Up" onclick="sub()"></td>
+		</tr>
+	</table>
+	
+</form>
+<p id="abc"></p>
+
+</body>
+</html>

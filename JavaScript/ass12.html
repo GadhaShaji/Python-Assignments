@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		var a="apple";//Global
+ document.write("<h1>Global</h1>");
+		function convert(){
+            
+			 document.write(a+" "+"inside"+" "+"function"+"<br>");
+			}
+		document.write(a+" "+"outside"+" "+"function"+"<br>");
+		convert();
+	</script>
+	<script type="text/javascript">
+		
+ document.write("<h1>Local</h1>");
+		function convert(){
+            var a="apple";//Local
+			 document.write(a+" "+"inside"+" "+"function"+"<br>");
+			}
+		
+		convert();
+	</script>
+</head>
+<body>
+	
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		label{
+			margin-left: 600px;
+		}
+	</style>
+	<script type="text/javascript">
+		function validat()
+		{
+			var check1=document.getElementById('abc').checked;
+			var check2=document.getElementById('bcd').checked;
+			if (check1==false && check2==false) {
+				document.getElementById("nme").innerHTML="please choose your Gender";
+
+			return false;
+
+			}
+			else
+			{
+				return true;
+			}
+		}
+	</script>
+</head>
+<body>
+	<form style="background-color: #00ffff">
+<h4 style="text-align: center;">Radio Button Validation</h4>
+<label>Gender: </label> <input type="radio" name="gender" value="male" id="abc">Male <input type="radio" name="gender" id="bcd" value="female">Female<br><br>
+<label id="nme" style="color: red;"></label><br><br>
+<input type="button" name="" style="margin-left: 650px;" value="Submit" onclick="validat()">
+</form>
+</body>
+</html>

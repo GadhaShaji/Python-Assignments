@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#p1{
+			background-color: red;
+		}
+		#p2{
+			background-color: orange;
+		}
+		#p3{
+			background-color: blue;
+		}
+		#p4{
+			background-color: brown;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#btn").click(function(){
+				$("#p1,#p2,#p3,#p4").css({"background-color":"yellow",
+					"font-size":"30px"});
+				
+  });
+		});
+		</script>
+</head>
+<body>
+<h3>This is a heading</h3><br>
+<p id="p1">This is paragraph 1</p><br>
+<p id="p2">This is paragraph 2</p><br>
+<p id="p3">This is paragraph 3</p><br>
+<p id="p4">This is paragraph 4</p><br>
+<button id="btn">Change Us</button>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+   function validate()
+    {
+
+      flag=0;
+      email=document.getElementById("txtuser").value;
+      if(email=="")
+      {
+        document.getElementById("lbluser").innerHTML="Enter your username";
+        document.getElementById("lbluser").style.color="red";
+        document.getElementById("txtuser").style.borderColor="red";
+        flag++;
+      }
+      else
+      {
+         document.getElementById("lbluser").innerHTML="";
+         document.getElementById("lbluser").style.color="initial";
+         document.getElementById("txtuser").style.borderColor="initial";
+      } 
+      pswd=document.getElementById("psd").value;
+      if(pswd=="")
+      {
+        document.getElementById("psdd").innerHTML="Enter your password";
+        document.getElementById("psdd").style.color="red";
+        document.getElementById("psd").style.borderColor="red";
+        flag++;
+      }
+      else
+      {
+         document.getElementById("psdd").innerHTML="";
+         document.getElementById("psdd").style.color="initial";
+         document.getElementById("psd").style.borderColor="initial";
+      }
+    } 
+     function validation()
+     {
+      flag=0;
+      first=document.getElementById("fname").value;
+      if(first=="")
+      {
+        document.getElementById("lblfnme").innerHTML="Enter your first name";
+        document.getElementById("lblfnme").style.color="red";
+        document.getElementById("fname").style.borderColor="red";
+        flag++;
+      }
+      else
+      {
+        document.getElementById("lblfnme").innerHTML="";
+        document.getElementById("lblfnme").style.color="initial";
+        document.getElementById("fname").style.borderColor="initial";
+      } 
+       
+      last=document.getElementById("lname").value;
+      if(last=="")
+      {
+        document.getElementById("lbllnme").innerHTML="Enter your Last name";
+        document.getElementById("lbllnme").style.color="red";
+        document.getElementById("lname").style.borderColor="red";
+        flag++;
+      }
+      else
+      {
+        document.getElementById("lbllnme").innerHTML="";
+        document.getElementById("lbllnme").style.color="initial";
+        document.getElementById("lname").style.borderColor="initial";
+      } 
+
+      mobile=document.getElementById("mob").value;
+      if(mobile=="")
+      {
+        document.getElementById("lblmob").innerHTML="Enter your Mobile Number";
+        document.getElementById("lblmob").style.color="red";
+        document.getElementById("mob").style.borderColor="red";
+        flag++;
+      }
+      else
+      {
+        document.getElementById("lblmob").innerHTML="";
+        document.getElementById("lblmob").style.color="initial";
+        document.getElementById("mob").style.borderColor="initial";
+      }
+      
+      email=document.getElementById("txtemail").value;
+      var atposition=email.indexOf("@");  
+      var dotposition=email.lastIndexOf(".");  
+      if(email=="")
+      {
+       document.getElementById("lblemail").innerHTML="Enter your Email Id";
+       document.getElementById("lblemail").style.color="red";
+       document.getElementById("txtemail").style.borderColor="red";
+        flag++;
+      }
+      else if (atposition<1 || dotposition<atposition+2 || dotposition+2>=email.length) 
+      {
+          document.getElementById("lblemail").innerHTML="Enter a valid e-mail address";
+          document.getElementById("lblemail").style.color="red";
+          document.getElementById("txtemail").style.borderColor="red";
+          flag++;
+      }
+      else
+      {
+        document.getElementById("lblemail").innerHTML="";
+        document.getElementById("lblemail").style.color="initial";
+        document.getElementById("txtemail").style.borderColor="initial";
+      } 
+      password=document.getElementById("txtpass").value; 
+      if(password=="")
+      {
+       document.getElementById("lblpwd").innerHTML="Enter your Password";
+       document.getElementById("lblpwd").style.color="red";
+       document.getElementById("txtpass").style.borderColor="red";
+        flag++;
+      }
+      else
+      {
+        document.getElementById("lblpwd").innerHTML="";
+        document.getElementById("lblpwd").style.color="initial";
+        document.getElementById("txtpass").style.borderColor="initial";
+      } 
+
+      genders = document.getElementsByName("gender");
+      if ((genders[0].checked==false) && (genders[1].checked==false))
+      
+      {
+        document.getElementById("lblgender").innerHTML="Enter your Gender";
+        document.getElementById("lblgender").style.color="red";
+        return false;
+      }
+      else
+      { 
+        document.getElementById("lblgender").innerHTML="";
+        document.getElementById("lblgender").style.color="initial";
+      }
+
+    }
+      
+    
+  </script>
+</head>
+<body>
+	<form action="#" name="myform" onsubmit="return(validation());"> 
+<table width="100%" cellspacing="0">
+	
+		<tr style="background-color:#3b5998;color: white; ">
+		<td width="55%"><img src="fblogo.png" width="220px"></td>
+		<td align="left">
+			<label>Username or Phone</label> <label style="padding-left: 80px;">Password</label>	<br>
+			 <input type="text" id="txtuser" name="username">
+			   
+			<input type="text" name="password" id="psd">
+			<input type="button" name="" value="LOGIN" onclick="return validate()" ><br><label id="lbluser"></label>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label id="psdd"></label>
+			
+		</td>
+
+		</tr>
+
+		<tr bgcolor="#f0f5f5">
+		<td>
+			<table style="padding-bottom: 250px;">
+				<tr><td><h3 style="padding-left: 100px;">Connect with friends and the world around you on Facebook</h3></td></tr>
+				<br><br>
+				<tr><td><img src="facebookhome.png" style="padding-left: 100px;"></td></tr>
+
+			</table>
+		</td>
+		<td><table>
+				<tr><td><h2>Create an account</h2><h6>It's free and always will be</h6></td>
+					</tr>
+				<tr><td><table border="0" cellspacing="10" >
+      	<tr>
+      		<td>
+      			<input type="text" placeholder="First Name" id="fname" style="height: 30px"size="20"><br>
+            <label id="lblfnme"></label>
+      		</td>
+           <td align="left" style="padding-right:75px">
+      			<input type="text" placeholder="Last Name" id="lname" style="height: 30px"size="30"><br>
+            <label id="lbllnme"></label>
+      		</td>	
+
+      	</tr>
+        <tr><span id="sp1"></span></tr>
+       
+
+      	<tr>
+      		<td colspan="2">
+      			<input type="text" size="60" placeholder="Mobile Number" id="mob" style="height: 40px"><br>
+            <label id="lblmob"></label>
+      		</td>
+      	</tr>
+        <tr><span id="sp1"></span></tr>
+      	<tr>
+      		<td colspan="2">
+      			<input type="text" size="60" placeholder="Email" id="txtemail" style="height: 40px"><br>
+            <label id="lblemail"></label>
+      		</td>
+      	</tr>
+        <tr><span id="sp1"></span></tr>
+      	<tr>
+      		<td colspan="2">
+      			<input type="text" size="60" placeholder="Password" id="txtpass" style="height: 40px"><br>
+            <label id="lblpwd"></label>
+      		</td>
+      	</tr>
+        <tr><span id="sp1"></span></tr>
+      	<tr><td colspan ="5" align="left">Birthday</td></tr>
+      	<tr>
+      		
+		<td ><select name="Day">
+    <option value="01">Day</option>
+    <option value="02">01</option>
+    <option value="03">02</option>
+    <option value="04">03</option>
+    <option value="05">04</option>
+  </select>
+  <select name="Month">
+    <option value="01">Month</option>
+    <option value="02">Jan</option>
+    <option value="03">Feb</option>
+    <option value="04">Mar</option>
+    <option value="05">Apr</option>
+  </select>
+  <select name="Year">
+    <option value="01">Year</option>
+    <option value="02">1990</option>
+    <option value="03">1991</option>
+    <option value="04">1993</option>
+    <option value="05">1994</option>
+  </select>
+  <td><p style="color: blue;width: 200px;">Why do I need to provide my date of birth.</p></td>
+</td>
+      	</tr>
+        <tr><span id="sp1"></span></tr>
+      	<tr>
+      		<td colspan="2">
+      			<input type="radio" name="gender">Male
+      			<input type="radio" name="gender">Female<br>
+             <label id="lblgender"></label>
+      		</td>
+      	</tr>
+        <tr><span id="sp1"></span></tr>
+      	<tr>
+      		<td colspan="2">
+      			<font color="#666666" face="Verdana,Arial,Helvetica,sans-serif" size="1">By Clicking Sign Up,you agree to our <span style="color: blue">Terms</span> and that you have read our Data Use <span style="color: blue;">Policy</span>,including our Cookie Use.</font>
+      		</td>
+      	</tr>
+      	<tr>
+      		<td colspan="2">
+      			<input type="Submit" value="Create an account"  width="140" style="border-radius: 8px;
+			background-color: #1b631c;
+			height: 30px;
+			color: white;">
+      		</td>
+      	</tr>
+      </table>  </td></tr>
+			</table></td>
+			<td></td>
+			<td></td>
+	</tr>
+	<tr></tr>
+</table>
+</form>
+</body>
+</html>

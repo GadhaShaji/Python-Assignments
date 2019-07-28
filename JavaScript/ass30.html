@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title style="text-align: center;">CUSTOMER REGISTRATION</title>
+	<style type="text/css">
+		table{
+			margin-left: 300px;
+            margin-right: 300px;
+            background-color: #00ffff;
+            
+			}
+		h3{
+			margin-left: 100px;
+			text-align: center;
+		}
+		.btn{
+			margin-left: 300px;
+		}
+		
+
+	</style>
+	<script type="text/javascript">
+		
+		function validate()
+		{
+
+			flag=0;
+			name=document.myform.Name.value;
+			if(name=="")
+			{
+				document.getElementById("nme").innerHTML="Enter your Name";
+				
+				
+				flag++;
+			}
+			else
+			{
+				document.getElementById("nme").innerHTML="";
+				
+			}
+			add =document.myform.adress.value;
+			if(add=="")
+			{
+				document.getElementById("adres").innerHTML="Enter your Address";
+				
+				flag++;
+			}
+			else
+			{
+				document.getElementById("adres").innerHTML="";
+				
+			}
+			emal =document.myform.email.value;
+			var rr=/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+			if(emal=="")
+			{
+				document.getElementById("eml").innerHTML="Enter a valid Email";
+				
+				flag++;
+			}
+			else if(!rr.test(emal))
+			{
+				document.getElementById("eml").innerHTML="please enter valid Email ID";
+				
+				flag++;
+			}
+			else
+			{
+				document.getElementById("eml").innerHTML="";
+				
+			}
+			telnum =document.myform.TelNo.value;
+			var mob=/^[0-9]{10}$/;
+			if(telnum=="")
+			{
+				document.getElementById("tel").innerHTML="Enter your Mobile Number";
+				
+				flag++;
+			}
+			else if (!mob.test(telnum)) {
+				document.getElementById("tel").innerHTML="please enter valid Mobile Number";
+				
+				flag++;
+			}
+			else
+			{
+				document.getElementById("tel").innerHTML="";
+				
+			}
+			pswd=document.myform.Password.value;
+			if(pswd=="")
+			{
+				document.getElementById("psd").innerHTML="Enter your password";
+				
+				flag++;
+			}
+			else if (pswd.length<5) 
+			{
+				document.getElementById("psd").innerHTML=" Length of  password is too small";
+				
+				flag++;
+			}
+			else
+			{
+				document.getElementById("psd").innerHTML="";
+				
+			}
+			paswd=document.myform.Passwordd.value;
+			if(pswd!=paswd)
+			{
+				document.getElementById("psdd").innerHTML="Re-enter your password";
+				
+				flag++;
+			}
+			
+			else
+			{
+				document.getElementById("psdd").innerHTML="";
+				
+			}
+		 
+			
+			
+			
+			
+           
+			if(flag>0)
+			{
+				return false;
+			}
+       
+			
+
+	    }
+			 
+			 
+
+			
+
+
+		
+	</script>
+</head>
+<body>
+<form action="#" name="myform" style=" background-color: #00ffff;" onsubmit="return(validate());"> 
+	<table cellpadding="3" cellspacing="5"  width="800px">
+
+		<tr>
+			<h3>STUDENT REGISTRATION FORM</h3>
+		</tr>
+		<tr>
+			<td><label > Name:</label></td>
+			<td><input type="text" name="Name"  ></td>
+			<td><label id="nme" name="Name" style="color: red;"></label></td>
+		</tr>
+		<tr>
+			<td><label>Personal Address:</label></td>
+			<td>
+			<input type="text" name="adress" >
+			<td><label id="adres" style="color: red;"></label></td>
+		</td>
+		</tr>
+		<tr>
+			<td><label>Email ID:</label></td>
+			<td><input type="text" name="email" ></td>
+			<td><label id="eml" style="color: red;"></label></td>
+		</tr>
+		
+		
+		<tr>
+			<td><label>Mobile No:</label></td>
+			<td><input type="text" name="TelNo"></td>
+			<td><label id="tel" style="color: red;"></label></td>
+		</tr>
+		<tr>
+			<td><label>Password:</label></td>
+			<td><input type="password" name="Password"></td>
+			<td><label id="psd" style="color: red;"></label></td>
+		</tr>
+		<tr>
+			<td><label>Confirm Password:</label></td>
+			<td><input type="password" name="Passwordd"></td>
+			<td><label id="psdd" style="color: red;"></label></td>
+		</tr>
+		
+		
+  <tr>
+  	<td>
+  		<input type="Submit" name="button" class="btn"  value="Submit Form" >
+  	</td>
+  </tr>
+  
+	</table>
+</form>
+</body>
+</html>
