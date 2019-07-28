@@ -8,42 +8,157 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <style type="text/css">
-    	#header{
-    		background-color: #3b5998;
-			color: white;
-            height: 60px;
-            padding-top: 10px;
-    	}
+   header{
+	background: #3b5998;
+	padding-top: 20px;
+}
+.login-bottom-text{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 15px;
+	color: white;
+	
+}
+.control-label{
+	color: white;
+}
+body{
+	background-color: #f0f5f5;
+}
+h4{
+	color: #0000b3;
+}
+.multibox{
+	padding-left: 0px;
+	padding-bottom: 10px;
+}
+
+
     </style>
+
 </head>
 <body>
+	<header>
 <div class="container">
 	<div class="row">
-	
-		<div class="col-xs-2">
-			
-				<img src="../images/fblogo.png" width="220px" height="50px;">
-			
+		
+		<div class="col-sm-6">
+			<div class="logo"><img src="fblogo.png"></div>
 		</div>
-		<div class="col-xs-10">
-			<form class="form-inline">
+
+		<div class="col-sm-6 hidden-xs">
+			<div class="row">
+				<div class="col-sm-5">
+					  <div class="form-group">
+					  	<label for="email" class="control-label">Email or Phone</label>
+					    <input type="text" class="form-control" placeholder="Email Address">
+					   
+					  </div>
+				</div>	
+				<div class="col-sm-5">
+					 <div class="form-group">
+					 	<label for="password" class="control-label">Password</label>
+					    <input type="text" class="form-control" placeholder="Password">
+					    <div class="login-bottom-text hidden-sm"> Forgotten Account?  </div>
+					  </div>
+				</div>
+				<div class="col-sm-2">
+					 <div class="form-group">
+					 	<br>
+					    <input type="button" value="Log In" class="btn btn-primary">
+					  </div>
+				</div>
+			</div>	
+		</div>
+	
+	</div>
+</div>
+</header>
+
+<article class="container">
+		<div class="row">
+			<div class="col-sm-7">
+				<div class="login-main">
+					<br>
+					<h4> Facebook helps you to connect and share with the people in your life.</h4><br>
+					<span><img src="facebookhome.png"></span>
+				</div>
+			</div>
+			<div class="col-sm-5">
+				<div class="">
+				
+				<h2><strong>Create an acccount</strong></h2>
+			  	<h5><strong>It's free and always will be.</strong></h5>
+				<div class="form-group form-inline">
+			   
+				  <input type="text" class="form-control" placeholder="First name">
+				
+				
+				  <input type="text" class="form-control" placeholder="Surname">
+				
+			</div>
+
 				<div class="form-group">
-				<label for="usernme" class="control-label">Username</label>
-				<input class="form-control" type="text" name="usertxt"  placeholder="Login username">
+				  
+				  <input type="text" class="form-control" placeholder="Mobile number or email address">
+				</div>
+
+				<div class="form-group">
+				  
+				  <input type="text" class="form-control" placeholder="Re-enter mobile number or email address">
 				</div>
 				<div class="form-group">
-				<label for="password" class="control-label">Password</label>
-				<input class="form-control" type="text" name="pswdtxt"  placeholder="Login password">
-				<a style="padding-left: 180px; color: white" href="#">Forgotten account?</a>	
-			    </div>
-			    
-			   
-				<button class="btn btn-primary">LOGIN</button>
-				
-			</form>
+				  
+				  <input type="password" class="form-control" placeholder="New Password">
+				</div>
+
+
+				<div class="">
+					<label>Birthday</label>
+				  <div class="form-group">
+					  <div class="col-sm-4 multibox">
+					 	<select class="form-control">
+					 		<option>Day</option>
+					 	</select>
+					  </div>
+					   <div class="col-sm-4 multibox">
+					 	<select class="form-control">
+					 		<option>Month</option>
+					 	</select>
+					  </div>
+					   <div class="col-sm-4 multibox">
+					 	<select class="form-control">
+					 		<option>Year</option>
+					 	</select><small style="color: blue;">Why do I need to provide my date of birth?</small>
+					  </div>
+					  
+				   
+				  </div>
+				</div>
+				<div class="radio">
+		
+		<label class="radio-inline">
+		<input type="radio" name="gender" value="male">Male
+		</label>
+		<label class="radio-inline">
+		<input type="radio" name="gender" value="female">Female
+	</label>
+	</div>
+		      
+				<small>
+					By clicking Sign Up, you agree to our <span style="color: blue;">Terms</span> and that you have read our
+					 <span style="color: blue;">Data Policy</span>, including our <span style="color: blue;">Cookie Use</span>.
+				</small>	 
+				<div style="height:10px;"></div>
+				<div class="form-group">
+				  <label class="control-label" for=""></label>
+				  <input type="submit" class="btn btn-success" value="Create an account">
+				</div>	 
+
+				  </div>
+			</div>
+			</div>
 		</div>
-	
-</div>
-</div>
+</article>
 </body>
 </html>
