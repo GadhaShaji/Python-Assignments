@@ -4,7 +4,17 @@
 	<title>Registration Form</title>
 	<script type="text/javascript">
 		function login(){
-		document.write("Login Successful");
+			var username=document.getElementById("uname").value;
+			var password=document.getElementById("pass").value;
+			if(username=="admin" && password=="admin123")
+			{
+				document.write("Login Successful");
+			}
+			else
+			{
+				document.write("Invalid Credentials");
+			}
+		
 		}
 	</script>
 </head>
@@ -13,12 +23,9 @@
 
 
 <form action="#" method="post">
-	  User Name:<input type="text" name="username">
-	  Password:<input type="password" name="password">
-	<input type="button"  value="Login" onclick="login()" >
-		
-	
-	
+	  User Name:<input type="text" id="uname">
+	  Password:<input type="password" id="pass">
+	<input type="button"  value="Login"  onclick="login()">
 </form>
 </body>
 </html>
